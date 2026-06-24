@@ -96,6 +96,11 @@
 	
         
     if(isset($_POST['name'])){
+
+	echo "<pre>";
+print_r($_POST);
+echo "</pre>";
+
         $conn = new mysqli($servername, $username, $password, $db);
 
         if($conn->connect_error){
@@ -140,6 +145,7 @@
         <h2>Registration</h2>
 
         <form action="index.php" method="POST">
+
 
             <input type="text" name="name" placeholder="Name" required>
             <input type="email" name="email" placeholder="Email" required>
