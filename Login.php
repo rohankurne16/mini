@@ -78,7 +78,7 @@
 </head>
 <body>
     <?php
-		$servername = "192.168.1.45";
+		$servername = "localhost";
     		$username = "root";
     		$password = "root";
     		$db = "mini";
