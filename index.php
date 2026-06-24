@@ -106,6 +106,7 @@ echo "</pre>";
         if($conn->connect_error){
             die("Connection Failed" . $conn->connect_error);
         }
+	echo "Database Connected Successfully<br>";
 	
 	$name = $_POST["name"];    
         $email = $_POST["email"];
