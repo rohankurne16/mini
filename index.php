@@ -106,7 +106,26 @@ echo "</pre>";
         if($conn->connect_error){
             die("Connection Failed" . $conn->connect_error);
         }
-	echo "Database Connected Successfully<br>";
+		if(isset($_POST['name'])){
+
+    echo "STEP 1<br>";
+
+    echo "<pre>";
+    print_r($_POST);
+    echo "</pre>";
+
+    echo "STEP 2<br>";
+
+    $conn = new mysqli($servername, $username, $password, $db);
+
+    echo "STEP 3<br>";
+
+    if($conn->connect_error){
+        die("Connection Failed: " . $conn->connect_error);
+    }
+
+    echo "STEP 4 - Connected<br>";
+}
 	
 	$name = $_POST["name"];    
         $email = $_POST["email"];
